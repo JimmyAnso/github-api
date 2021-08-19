@@ -104,7 +104,7 @@ export default {
       // 隨機水平位置
       flot.style.left = `${Math.random() * 80}% `;
       // 使用 dataset 給予隨機滾動速率
-      flot.dataset.speed = 0 - Math.random()*5
+      flot.dataset.speed = 0 - Math.random()*5;
       });
   },
   methods: {
