@@ -142,19 +142,23 @@ export default {
           console.log(error);
         });
     },
-    //判斷捲軸位置，若到底則重 call this.getAPI() 將資料 push 到 myRepos
+    
     isRefresh() {
 
+// 每 call 一次 API 就更新一次 視差滾動的 translateY
       const flots = document.querySelectorAll(".flot");
 
       flots.forEach(flot => {
+        // window.pageYOffset 垂直滾動的像素
+        // window.pageYOffset 與 window.scrollY 功能相同
+        // 但是 window.pageYOffset 的瀏覽器相容性較高(Full support)
         flot.style.transform = 
           `translateY( 
               ${window.pageYOffset * Number(flot.dataset.speed)}px
           )`;
         }
       );
-
+//判斷捲軸位置，若到底則重 call this.getAPI() 將資料 push 到 myRepos
       // document.documentElement：回傳目前 document 的根元素
 
       //scrollTop：視窗頂端 到 頁面頂端 的距離
