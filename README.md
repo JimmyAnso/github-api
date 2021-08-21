@@ -1,5 +1,9 @@
 # github-api
 
+## 串接 Github API 、Infinite Scroll (無限滾動) 、Parallax Scrolling (視差滾動)
+
+## DEMO：https://jimmyanso.github.io/github-api/
+
 ## Project setup
 ```
 yarn install
